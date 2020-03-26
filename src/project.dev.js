@@ -40,7 +40,7 @@ __require = function e(t, n, r) {
         window.addEventListener("message", function(e) {
           var data = e.data;
           console.log("-------------- Game: this is web message--------------", data);
-          if (-1 != data.indexOf("ToGame:")) {
+          if (-1 != data.indexOf("ToGame://")) {
             var str = data.replace("ToGame://", "");
             self.label.string = "Received message: " + str;
           }
@@ -52,7 +52,7 @@ __require = function e(t, n, r) {
       },
       onBtnClick: function onBtnClick() {
         console.log("------- Send Message To Hall -------------", window.isNative);
-        window.isNative ? document.location = "testkey://" + this.text : parent.postMessage("ToHall:" + this.text, "*");
+        window.isNative ? document.location = "testkey://" + this.text : parent.postMessage("ToHall://" + this.text, "*");
       }
     });
     cc._RF.pop();
