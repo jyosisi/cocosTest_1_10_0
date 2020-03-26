@@ -81,6 +81,8 @@
         }
 
         var onStart = function () {
+            cc.director.setClearColor(new cc.Color(0,0,0, 0));
+            
             cc.loader.downloader._subpackages = settings.subpackages;
 
             if (false) {
@@ -183,6 +185,8 @@
             collisionMatrix: settings.collisionMatrix,
             renderMode: 0
         }
+
+        cc.macro.ENABLE_TRANSPARENT_CANVAS = true;
 
         cc.game.run(option, onStart);
     }

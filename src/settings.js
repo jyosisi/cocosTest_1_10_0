@@ -16,26 +16,23 @@ window._CCSettings = {
         {
             url: "db://assets/Scene/helloworld.fire",
             uuid: "2dL3kvpAxJu6GJ7RdqJG5J"
-        },
-        {
-            url: "db://assets/test.fire",
-            uuid: "ecgFl6ANxL1LbdaY2BFGVA"
         }
     ],
     packedAssets: {
-        "05809a027": [
-            "a2MjXRFdtLlYQ5ouAFv/+R",
-            "ecgFl6ANxL1LbdaY2BFGVA"
+        "0611c5f7b": [
+            "71VhFCTINJM6/Ky3oX9nBT",
+            "a8Anh32NZGRZegUtSgEj26",
+            "b4P/PCArtIdIH38t6mlw8Y",
+            "cf73jxyN9Jt47QTJU6ziYh",
+            "e8Ueib+qJEhL6mXAHdnwbi"
         ],
-        "05dd1dc0e": [
+        "0e10a2054": [
+            "29FYIk+N1GYaeWH/q1NxQO",
             "2dL3kvpAxJu6GJ7RdqJG5J",
-            "31vIlawANFZqnzLlSuHBfc",
-            "41D7kWhyFGY7q4NDlzkazn"
-        ],
-        "0695875db": [
-            "02delMVqdBD70a/HSD99FK",
-            "6aoKpq6+5BVaCIpoemqt7E",
-            "a8Anh32NZGRZegUtSgEj26"
+            "41D7kWhyFGY7q4NDlzkazn",
+            "675ovJ2tVK2aLYfgPUWOMv",
+            "e97GVMl6JHh5Ml5qEDdSGa",
+            "f0BIwQ8D5Ml7nTNQbh1YlS"
         ]
     },
     orientation: "",

@@ -31,13 +31,26 @@ __require = function e(t, n, r) {
         label: {
           default: null,
           type: cc.Label
-        },
-        text: "Hello, World!"
+        }
       },
       onLoad: function onLoad() {
-        this.label.string = this.text;
+        this.text = "";
+        this.label.string = "";
+        var self = this;
+        window.addEventListener("message", function(e) {
+          var data = e.data;
+          console.log("--------------this is web message--------------", data);
+          -1 != data.indexOf("ToGame:") && (self.label.string = data);
+        });
       },
-      update: function update(dt) {}
+      update: function update(dt) {},
+      onEditDidEnded: function onEditDidEnded(editbox, customEventData) {
+        this.text = editbox.string;
+      },
+      onBtnClick: function onBtnClick() {
+        console.log("-------web--------onClick-----\x3e>cocos JS-------------", window.isNative);
+        window.isNative ? document.location = "testkey://" + this.text : parent.postMessage("ToHall:" + this.text, "*");
+      }
     });
     cc._RF.pop();
   }, {} ]
