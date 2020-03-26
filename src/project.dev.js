@@ -39,8 +39,11 @@ __require = function e(t, n, r) {
         var self = this;
         window.addEventListener("message", function(e) {
           var data = e.data;
-          console.log("--------------this is web message--------------", data);
-          -1 != data.indexOf("ToGame:") && (self.label.string = data);
+          console.log("-------------- Game: this is web message--------------", data);
+          if (-1 != data.indexOf("ToGame:")) {
+            var str = data.replace("ToGame://", "");
+            self.label.string = "Received message: " + str;
+          }
         });
       },
       update: function update(dt) {},
@@ -48,7 +51,7 @@ __require = function e(t, n, r) {
         this.text = editbox.string;
       },
       onBtnClick: function onBtnClick() {
-        console.log("-------web--------onClick-----\x3e>cocos JS-------------", window.isNative);
+        console.log("------- Send Message To Hall -------------", window.isNative);
         window.isNative ? document.location = "testkey://" + this.text : parent.postMessage("ToHall:" + this.text, "*");
       }
     });
